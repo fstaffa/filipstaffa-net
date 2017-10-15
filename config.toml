@@ -2,9 +2,9 @@ baseurl = "http://realtor-otter-64216.netlify.com"
 languageCode = "en"
 title = "Filip Staffa"
 theme = "hemingway"
-copyright = "&copy; <a href=\"https://github.com/fstaffa\">Filip Staffa</a> 2016"
+copyright = "&copy; <a href=\"https://github.com/fstaffa\">Filip Staffa</a> 2017"
 # disqusShortname = "shortname"
-googleAnalytics = ""
+# googleAnalytics = ""
 
 [params]
 
@@ -13,7 +13,7 @@ style = "github"
 languages = ["go", "typescript"]
 
 [[params.social]]
-url = "https://github.com/tanksuzuki"
+url = "https://github.com/fstaffa"
 fa_icon = "fa-github"
 
 [[params.social]]
