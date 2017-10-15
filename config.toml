@@ -1,4 +1,4 @@
-baseurl = "https://example.com"
+baseurl = "http://realtor-otter-64216.netlify.com"
 languageCode = "en"
 title = "Filip Staffa"
 theme = "hemingway"
