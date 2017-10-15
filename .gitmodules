@@ -1,0 +1,6 @@
+[submodule "themes/hemingway2"]
+	path = themes/hemingway2
+	url = https://github.com/tanksuzuki/hemingway.git
+[submodule "themes/hemingway"]
+	path = themes/hemingway
+	url = https://github.com/tanksuzuki/hemingway.git

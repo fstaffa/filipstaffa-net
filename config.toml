@@ -1,0 +1,21 @@
+baseurl = "https://example.com"
+languageCode = "en"
+title = "Filip Staffa"
+theme = "hemingway"
+copyright = "&copy; <a href=\"https://github.com/fstaffa\">Filip Staffa</a> 2016"
+# disqusShortname = "shortname"
+googleAnalytics = ""
+
+[params]
+
+[params.highlight]
+style = "github"
+languages = ["go", "typescript"]
+
+[[params.social]]
+url = "https://github.com/tanksuzuki"
+fa_icon = "fa-github"
+
+[[params.social]]
+url = "/index.xml"
+fa_icon = "fa-rss"
