@@ -1,5 +1,5 @@
 ---
-title: "Migrating From Elastic Beanstalk"
+title: "Migrating from Elastic Beanstalk"
 date: 2018-02-12T18:59:30+01:00
 tags: ['devops', 'aws', 'ecs']
 ---
