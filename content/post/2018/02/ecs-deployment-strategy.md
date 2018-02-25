@@ -1,7 +1,6 @@
 ---
 title: "ECS Basic Setup"
 date: 2018-02-13T21:36:39+01:00
-draft: true
 tags: ['devops', 'aws', 'ecs']
 ---
 
