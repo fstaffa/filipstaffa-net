@@ -1,6 +1,6 @@
 ---
 title: "ECS Basic Setup"
-date: 2018-02-13T21:36:39+01:00
+date: 2018-03-13T20:36:39+01:00
 tags: ['devops', 'aws', 'ecs']
 ---
 
@@ -76,7 +76,7 @@ Second security group is applied to EC2 instances. This security group should ha
 
 There are two main IAM roles for ECS deployment. 
 
-[ECS container instance role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html) is applied to EC2 machines serving as container hosts. It contains permissions necessary to authorize with the ECS cluster, register itself as container instance and download images from ECR (Elastic Container Registry, works as a Docker registry).
+[ECS container instance role](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/instance_IAM_role.html) is applied to EC2 machines serving as container hosts. It contains permissions necessary to authorize with the ECS cluster, register itself as container instance and download images from ECR (Elastic Container Registry, is an Amazon hosted Docker registry).
 
 This role is also inherited by all tasks run on the instance. If you need additional permissions for your tasks (e.g. S3 access) you can create [IAM roles for tasks](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-iam-roles.html) and assign them to tasks based on what they need. The alternative (easier, but less save) is to add additional permissions to the ECS container instance role.
 
@@ -88,7 +88,7 @@ ECS services can be used with both classic and application load balancer. There 
 
 It works on the layer 7 (application) of OSI model and can route traffic to different applications based on path or host. In the example this is used to use one load balancer for two different applications and routes based on path.
 
-The biggest advantage is that it allows containers to use dynamic port mapping. This means that you don't have to specify how should application container port map to the host port. If you have many applications you don't have to keep track which application uses which port to make sure they don't clash when deployed on the same host and also allows deploying the same application multiple times on the same host.
+The biggest advantage is that it allows containers to use dynamic port mapping. This means that you don't have to specify how should application container port map to the host port. If you have many applications you don't have to keep track which application uses which port to make sure they don't clash when deployed on the same host. It also allows deploying the same application multiple times on the same host.
 
 
 ### Cluster
@@ -99,9 +99,9 @@ As a part of the machine setup, it defines the to which cluster it should connec
 
 The machine uses ECS container instance role and has security group which allows inbound traffic from load balancer.
 
-# Deployment
+# Conclusion
 
-ECS by itself does not have any easy way to deploy new version of image ()
+ECS can be complicated because there are several concepts which need to be understood. ECS reference architecture from AWS is a good starting point because it shows most of them and how they relate to each other. It also shows it using CloudFormation template so it helps starting with your own cluster the right way.
 
 # Resources
 
