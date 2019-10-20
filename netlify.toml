@@ -16,14 +16,14 @@
     X-Content-Type-Options = "nosniff"
     Feature-Policy = "vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
 [[headers]]
-  for = "/img/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, s-max-age=604800"
+    Cache-Control = "public, s-max-age=604800, immutable"
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, s-max-age=604800"
+    Cache-Control = "public, s-max-age=604800, immutable"
+[[headers]]
+  for = "/"
+  [headers.values]
+    Link = "</dist/even.c2a46f00.min.css>; rel=preload; as=style, </dist/even.26188efa.min.js>; rel=preload; as=script"
