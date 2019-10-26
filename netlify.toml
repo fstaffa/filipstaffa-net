@@ -10,9 +10,9 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-XSS-Protection = "1; mode=block"
-    Content-Security-Policy = "form-action https:"
+    Content-Security-Policy = "default-src 'none'; img-src 'self'; script-src 'self' 'https://cdn.jsdelivr.net' 'https://ajax.cloudflare.com'; style-src 'self'"
     Referrer-Policy = "no-referrer-when-downgrade"
-    Strict-Transport-Security = "max-age=2592000"
+    Strict-Transport-Security = "max-age=31536000"
     X-Content-Type-Options = "nosniff"
     Feature-Policy = "vibrate 'none'; geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'none'; vibrate 'none'; fullscreen 'none'; payment 'none'"
 [[headers]]
@@ -25,5 +25,9 @@
     Cache-Control = "public, s-max-age=604800, immutable"
 [[headers]]
   for = "/"
+  [headers.values]
+    Link = "</dist/even.c2a46f00.min.css>; rel=preload; as=style, </dist/even.26188efa.min.js>; rel=preload; as=script"
+[[headers]]
+  for = "/post/*"
   [headers.values]
     Link = "</dist/even.c2a46f00.min.css>; rel=preload; as=style, </dist/even.26188efa.min.js>; rel=preload; as=script"
