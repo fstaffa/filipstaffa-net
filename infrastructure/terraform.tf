@@ -3,7 +3,7 @@ terraform {
 }
 
 provider "cloudflare" {
-  version = "~> 2.0"
+  version = "~> 2.4.1"
 }
 
 terraform {

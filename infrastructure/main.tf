@@ -45,7 +45,7 @@ resource "cloudflare_record" "txt_dmarc" {
   type    = "TXT"
   ttl     = "1"
   proxied = "false"
-  value   = "v=DMARC1; p=none; rua=mailto:dmarc@filipstaffa.net"
+  value   = "v=DMARC1;p=reject;sp=none;pct=100;adkim=s;aspf=s;rua=mailto:easy484059@easydmarc.com,mailto:e80e9a1258f5771@rep.dmarcanalyzer.com;ruf=mailto:ruf@rep.easydmarc.com,mailto:e80e9a1258f5771@for.dmarcanalyzer.com;fo=1"
 }
 
 
@@ -88,6 +88,8 @@ resource "cloudflare_zone_settings_override" "zone" {
     min_tls_version  = "1.2"
     ssl              = "strict"
     tls_1_3          = "on"
+    http3            = "on"
+    ipv6             = "on"
 
     security_header {
       enabled            = true
