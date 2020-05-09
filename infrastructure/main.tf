@@ -14,7 +14,7 @@ resource "cloudflare_record" "cname_root" {
   type    = "CNAME"
   ttl     = "1"
   proxied = "true"
-  value   = "filipstaffa.netlify.com"
+  value   = "filipstaffa.netlify.app"
 }
 
 
@@ -24,7 +24,7 @@ resource "cloudflare_record" "cname_www" {
   type    = "CNAME"
   ttl     = "1"
   proxied = "true"
-  value   = "filipstaffa.netlify.com"
+  value   = "filipstaffa.netlify.app"
 }
 
 
