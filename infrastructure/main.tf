@@ -28,6 +28,26 @@ resource "cloudflare_record" "cname_www" {
 }
 
 
+resource "cloudflare_record" "dnslink_root" {
+  zone_id = local.zone_id
+  name    = "_dnslink"
+  type    = "CNAME"
+  ttl     = "60"
+  proxied = "false"
+  value   = "_dnslink.young-limit-4303.on.fleek.co"
+}
+
+
+resource "cloudflare_record" "dnslink_www" {
+  zone_id = local.zone_id
+  name    = "_dnslink.www"
+  type    = "CNAME"
+  ttl     = "60"
+  proxied = "false"
+  value   = "_dnslink.young-limit-4303.on.fleek.co"
+}
+
+
 resource "cloudflare_record" "mx" {
   zone_id  = local.zone_id
   name     = "filipstaffa.net"
