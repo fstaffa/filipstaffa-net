@@ -1,9 +1,9 @@
 [context.branch-deploy.environment]
-  HUGO_VERSION = "0.102.3"
+  HUGO_VERSION = "0.123.8"
 [context.deploy-preview.environment]
-  HUGO_VERSION = "0.102.3"
+  HUGO_VERSION = "0.123.8"
 [context.production.environment]
-  HUGO_VERSION = "0.102.3"
+  HUGO_VERSION = "0.123.8"
 
 [[headers]]
   for = "/*"
